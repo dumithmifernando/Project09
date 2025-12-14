@@ -5,6 +5,14 @@ import { Navigation } from './components/layout/Navigation';
 
 import { EventList } from './components/events/EventList';
 import { EventDetails } from './components/events/EventDetails';
+import { ProtectedRoute } from './components/auth/ProtectedRoute';
+
+// Pages
+import { HomePage } from './pages/HomePage';
+import { Login } from './components/auth/Login';
+import { Register } from './components/auth/Register';
+import { SuperAdminPanel } from './components/admin/SuperAdminPanel';
+import { ClubAdminPanel } from './components/admin/ClubAdminPanel';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +28,32 @@ const App: React.FC = () => {
               <Route path="/events/:id" element={<EventDetails />} />
               
               
+              {/* Public Routes */}
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              
+              
+            
+              
+              {/* Protected Admin Routes */}
+              <Route 
+                path="/admin/super" 
+                element={
+                  <ProtectedRoute requiredRole="SUPER_ADMIN">
+                    <SuperAdminPanel />
+                  </ProtectedRoute>
+                } 
+              />
+              
+              <Route 
+                path="/admin/club" 
+                element={
+                  <ProtectedRoute requiredRole="CLUB_ADMIN">
+                    <ClubAdminPanel />
+                  </ProtectedRoute>
+                } 
+              />
               
               {/* Catch all - redirect to home */}
               <Route path="*" element={<Navigate to="/" replace />} />
