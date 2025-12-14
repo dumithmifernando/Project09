@@ -2,6 +2,9 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { Navigation } from './components/layout/Navigation';
+
+import { EventList } from './components/events/EventList';
+import { EventDetails } from './components/events/EventDetails';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 
 // Pages
@@ -19,6 +22,12 @@ const App: React.FC = () => {
           
           <main>
             <Routes>
+              
+              {/* Events Routes */}
+              <Route path="/events" element={<EventList />} />
+              <Route path="/events/:id" element={<EventDetails />} />
+              
+              
               {/* Public Routes */}
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<Login />} />
