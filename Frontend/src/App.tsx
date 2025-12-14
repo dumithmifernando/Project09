@@ -11,6 +11,7 @@ import { Register } from './components/auth/Register';
 import { SuperAdminPanel } from './components/admin/SuperAdminPanel';
 import { ClubAdminPanel } from './components/admin/ClubAdminPanel';
 
+//additional imports can be added here
 const App: React.FC = () => {
   return (
     <AuthProvider>
