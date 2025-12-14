@@ -1,10 +1,6 @@
-E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\controller\ClubMembershipController.java
 E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\repository\ClubRepository.java
 E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\model\Club.java
 E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\controller\ClubController.java
-E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\repository\ClubMembershipRepository.java
 E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\service\ClubService.java
-E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\service\ClubMembershipService.java
-E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\model\ClubMembership.java
 E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\config\SecurityConfig.java
 E:\Desktop\Project09Club\backend\src\main\java\com\university\universe\UniverseApplication.java
